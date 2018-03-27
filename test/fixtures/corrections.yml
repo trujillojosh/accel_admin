@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: one
+  corrector: MyString
+  date: 2018-03-21
+  pitch: MyText
+  demo: MyText
+  b_kpi_a: MyText
+  t_kpi_a: MyText
+  help_a: MyText
+  blockers_a: MyText
+  other: MyText
+
+two:
+  team: two
+  corrector: MyString
+  date: 2018-03-21
+  pitch: MyText
+  demo: MyText
+  b_kpi_a: MyText
+  t_kpi_a: MyText
+  help_a: MyText
+  blockers_a: MyText
+  other: MyText

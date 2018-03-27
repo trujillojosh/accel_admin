@@ -1,0 +1,19 @@
+
+<%= simple_form_for(@team) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :batch %>
+    <%= f.input :stage %>
+    <%= f.input :end %>
+    <%= f.input :active %>
+    <%= f.input :lead %>
+    <%= f.input :summary %>
+    <%= f.input :notes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

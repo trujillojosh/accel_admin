@@ -1,0 +1,22 @@
+<h1>New Bulk Attendance</h1>
+<div>
+	<%= link_to 'Individual Attendance', '/attendances/new', :class => "btn btn-default" %>
+</div>
+
+
+<%= simple_form_for(@bulk_attendance) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :date %>
+    <%= f.input :attendees, as: :check_boxes, collection: active_members %>
+    <%= f.input :desc %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', bulk_attendances_path %>

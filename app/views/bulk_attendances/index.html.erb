@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bulk Attendances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Attendees</th>
+      <th>Desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bulk_attendances.each do |bulk_attendance| %>
+      <tr>
+        <td><%= bulk_attendance.title %></td>
+        <td><%= bulk_attendance.date %></td>
+        <td><%= bulk_attendance.attendees %></td>
+        <td><%= bulk_attendance.desc %></td>
+        <td><%= link_to 'Show', bulk_attendance %></td>
+        <td><%= link_to 'Edit', edit_bulk_attendance_path(bulk_attendance) %></td>
+        <td><%= link_to 'Destroy', bulk_attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bulk Attendance', new_bulk_attendance_path %>

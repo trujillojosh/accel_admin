@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @all_hand.team.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @all_hand.date %>
+</p>
+
+<p>
+  <strong>B kpi:</strong>
+  <%= @all_hand.b_kpi %>
+</p>
+
+<p>
+  <strong>T kpi:</strong>
+  <%= @all_hand.t_kpi %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @all_hand.help %>
+</p>
+
+<p>
+  <strong>Blockers:</strong>
+  <%= @all_hand.blockers %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @all_hand.other %>
+</p>
+
+<%= link_to 'Edit', edit_all_hand_path(@all_hand) %> |
+<%= link_to 'Back', all_hands_path %>

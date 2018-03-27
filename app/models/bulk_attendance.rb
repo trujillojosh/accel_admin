@@ -1,0 +1,3 @@
+class BulkAttendance < ApplicationRecord
+	
+end

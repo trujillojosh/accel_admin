@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  intra: MyString
+  first: MyString
+  last: MyString
+  dorm: false
+  slackname: MyString
+  imac: MyString
+  notes: 
+
+two:
+  intra: MyString
+  first: MyString
+  last: MyString
+  dorm: false
+  slackname: MyString
+  imac: MyString
+  notes: 

@@ -1,0 +1,9 @@
+<h1>New All Hand</h1>
+<p>
+	<strong>Teams yet to go:</strong>
+	<%= still_to_go.shuffle.join(', ') %>
+</p>
+
+<%= render 'form', all_hand: @all_hand %>
+
+<%= link_to 'Back', all_hands_path %>

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+
+<p>
+  <strong>Batch:</strong>
+  <%= @team.batch %>
+</p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @team.stage %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @team.end %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @team.active %>
+</p>
+
+<p>
+  <strong>Lead:</strong>
+  <%= @team.lead %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @team.summary %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @team.notes %>
+</p>
+<p>
+  <strong>Members:</strong>
+  <% @team.members.each do |person| %>
+    <% if person.active == true %>
+     <%= person.intra %>
+    <% end %>
+  <% end %>
+  <p>
+    <%= link_to 'Add Member', '/members/new' %>
+    <%= link_to 'Manage Members', '/members' %>
+  </p>
+</p>
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

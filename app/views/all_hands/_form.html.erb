@@ -1,0 +1,18 @@
+
+<%= simple_form_for(@all_hand) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :team %>
+    <%= f.input :date %>
+    <%= f.input :b_kpi, label: "Business KPI" %>
+    <%= f.input :t_kpi %>
+    <%= f.input :help %>
+    <%= f.input :blockers %>
+    <%= f.input :other %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+
+<%= simple_form_for(@correction) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :team, label: 'Team Being Corrected' %>
+    <%= f.input :corrector, label: 'Your Team Name' %>
+    <%= f.input :date %>
+    <%= f.input :pitch %>
+    <%= f.input :demo %>
+    <%= f.input :b_kpi_a, label: 'Business KPI' %>
+    <%= f.input :t_kpi_a %>
+    <%= f.input :help_a %>
+    <%= f.input :blockers_a %>
+    <%= f.input :other %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

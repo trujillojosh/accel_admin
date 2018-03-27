@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RcAdmin</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('rc_sm.png'), :rel => 'icon', :type =>  'image/png' %>
+  </head>
+
+  <body>
+  	<%= render "layouts/navigation" %>
+    <div class="container-fluid">
+    	<%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bulk_attendance.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @bulk_attendance.date %>
+</p>
+
+<p>
+  <strong>Attendees:</strong>
+  <%= @bulk_attendance.attendees %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @bulk_attendance.desc %>
+</p>
+
+<%= link_to 'Edit', edit_bulk_attendance_path(@bulk_attendance) %> |
+<%= link_to 'Back', bulk_attendances_path %>

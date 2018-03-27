@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @correction.team %>
+</p>
+
+<p>
+  <strong>Corrector:</strong>
+  <%= @correction.corrector %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @correction.date %>
+</p>
+
+<p>
+  <strong>Pitch:</strong>
+  <%= @correction.pitch %>
+</p>
+
+<p>
+  <strong>Demo:</strong>
+  <%= @correction.demo %>
+</p>
+
+<p>
+  <strong>B kpi a:</strong>
+  <%= @correction.b_kpi_a %>
+</p>
+
+<p>
+  <strong>T kpi a:</strong>
+  <%= @correction.t_kpi_a %>
+</p>
+
+<p>
+  <strong>Help a:</strong>
+  <%= @correction.help_a %>
+</p>
+
+<p>
+  <strong>Blockers a:</strong>
+  <%= @correction.blockers_a %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @correction.other %>
+</p>
+
+<%= link_to 'Edit', edit_correction_path(@correction) %> |
+<%= link_to 'Back', corrections_path %>
