@@ -5,7 +5,7 @@ class Login < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:marvin]
   def self.from_omniauth(auth)
-  	where(provider: auth.provider, uid: auth.id).first_or_craete do |user|
+  	where(provider: auth.provider, uid: auth.id).first_or_create do |user|
   		user.email = auth.info.email
   		user.password = Devise.friendly_token[0,20]
   		user.nickname = auth.info.nickname

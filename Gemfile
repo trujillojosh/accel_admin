@@ -39,6 +39,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'mini_magick'
 gem 'seed_dump'
+gem 'omniauth'
 gem 'omniauth-marvin'
 
 group :development, :test do
