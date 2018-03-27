@@ -12,7 +12,7 @@ class Login < ApplicationRecord
   		if auth.info.nickname == 'josh'
   			user.admin = true
   		else
-  			unser.admin = false
+  			user.admin = false
   		end
   	end
   end
