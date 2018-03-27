@@ -22,10 +22,13 @@ class ApplicationController < ActionController::Base
   	return curr - ret
   end
 
+  def is_admin
+    redirect_to new_correction_url unless login_signed_in? && current_login.admin == true
+  end
+
   helper_method :still_to_go
   helper_method :active_members
   helper_method :active_members_full
- 
-  # before_action :authenticate_login!
+  before_action :authenticate_login!
 
 end

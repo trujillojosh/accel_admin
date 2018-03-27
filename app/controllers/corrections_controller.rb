@@ -1,6 +1,6 @@
 class CorrectionsController < ApplicationController
   before_action :set_correction, only: [:show, :edit, :update, :destroy]
-
+  before_action :is_admin, only: [:update, :destroy, :show, :edit]
   # GET /corrections
   # GET /corrections.json
   def index

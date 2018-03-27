@@ -1,6 +1,6 @@
 class BulkAttendancesController < ApplicationController
   before_action :set_bulk_attendance, only: [:show, :edit, :update, :destroy]
-
+  before_action :is_admin
   # GET /bulk_attendances
   # GET /bulk_attendances.json
   def index

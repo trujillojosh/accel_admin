@@ -1,4 +1,5 @@
 class Logins::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+
   def marvin
     @login = Login.from_omniauth(request.env["omniauth.auth"])
     puts "\n\n\n" + @login.email

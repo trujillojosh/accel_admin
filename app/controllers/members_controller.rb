@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
-
+  before_action :is_admin
   # GET /members
   # GET /members.json
   def index

@@ -1,6 +1,6 @@
 class AllHandsController < ApplicationController
   before_action :set_all_hand, only: [:show, :edit, :update, :destroy]
-
+  before_action :is_admin
   # GET /all_hands
   # GET /all_hands.json
   def index

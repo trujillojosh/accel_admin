@@ -14,11 +14,15 @@
         <li><%= link_to 'RC', root_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Teams', '/teams' %></li>
-        <li><%= link_to 'Users', '/users' %></li>
-        <li><%= link_to 'Attendance', '/bulk_attendances/new' %></li>
-        <li><%= link_to 'Weekly Meeting', '/all_hands/new' %></li>
-        <li><%= link_to 'Correction', '/corrections/new' %></li>
+        <% if login_signed_in? %>
+          <% if current_login.admin == true %>
+            <li><%= link_to 'Teams', '/teams' %></li>
+            <li><%= link_to 'Users', '/users' %></li>
+            <li><%= link_to 'Attendance', '/bulk_attendances/new' %></li>
+            <li><%= link_to 'Weekly Meeting', '/all_hands/new' %></li>
+          <% end %>
+          <li><%= link_to 'Correction', '/corrections/new' %></li>
+        <% end %>
         <% if login_signed_in? %>
           <li><%= link_to('Logout', destroy_login_session_path, :method => :delete) %></li>
         <% else %>
