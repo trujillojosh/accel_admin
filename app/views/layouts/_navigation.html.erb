@@ -20,7 +20,7 @@
         <li><%= link_to 'Weekly Meeting', '/all_hands/new' %></li>
         <li><%= link_to 'Correction', '/corrections/new' %></li>
         <% if login_signed_in? %>
-          <li><%= link_to('Logout', destroy_login_session_path, method: :delete) %></li>
+          <li><%= link_to('Logout', destroy_login_session_path, :method => :delete) %></li>
         <% else %>
           <li><%= link_to('Login with 42', login_marvin_omniauth_authorize_path) %></li>
         <% end %>
