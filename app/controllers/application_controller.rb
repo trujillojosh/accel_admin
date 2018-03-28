@@ -26,9 +26,18 @@ class ApplicationController < ActionController::Base
     redirect_to new_correction_url unless login_signed_in? && current_login.admin == true
   end
 
+  def what_team
+    ret = Member.where("intra like ?", 'jtrujill')
+    # ret = Team.where(active: true).joins(:members).where(intra: { 'jtrujill' } )
+    puts ret.ids
+    return ret.to_s
+  end
+
   helper_method :still_to_go
   helper_method :active_members
   helper_method :active_members_full
+  helper_method :what_team
+
   before_action :authenticate_login!
 
 end
