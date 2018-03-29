@@ -6,13 +6,13 @@
     <%= f.association :team, label: 'Team Being Corrected' %>
     <%= f.input :corrector, label: 'Your Team Name' %>
     <%= f.input :date %>
-    <%= f.input :pitch %>
-    <%= f.input :demo %>
-    <%= f.input :b_kpi_a, label: 'Business KPI' %>
-    <%= f.input :t_kpi_a %>
-    <%= f.input :help_a %>
-    <%= f.input :blockers_a %>
-    <%= f.input :other %>
+    <%= f.input :pitch, label: 'Have the team give an elevator pitch. What did you like? What can they improve on?' %>
+    <%= f.input :demo, label: 'Have the team give you a demo of their product. What feedback do you have? If they do not have a demo, provide feedback on their current progress' %>
+    <%= f.input :b_kpi_a, label: 'What was their Business KPI? What progress have they made so far this week?' %>
+    <%= f.input :t_kpi_a, label: 'What was their Technical KPI? What progress have they made so far this week?'%>
+    <%= f.input :help_a, label: 'Did the team need any help this week? IF so, were they able to find someone?' %>
+    <%= f.input :blockers_a, label: 'Do they have any current blockers? If so, please explain.' %>
+    <%= f.input :other, label: 'Any other feedback?' %>
   </div>
 
   <div class="form-actions">
