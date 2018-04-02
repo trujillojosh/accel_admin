@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def still_to_go
   	curr = active_teams
-  	ret = Team.where(active: true).joins(:all_hands).where(created_at: (Time.now.midnight - 5.day)..Time.now).pluck(:name)
+  	ret = Team.where(active: true).joins(:all_hands).where(created_at: (Time.now - 5.day)..Time.now).pluck(:name)
   	return curr - ret
   end
 
