@@ -10,10 +10,10 @@
       <th>Date</th>
       <th>Pitch</th>
       <th>Demo</th>
-      <th>B kpi a</th>
-      <th>T kpi a</th>
-      <th>Help a</th>
-      <th>Blockers a</th>
+      <th>B KPI</th>
+      <th>T KPI</th>
+      <th>Help</th>
+      <th>Blockers</th>
       <th>Other</th>
       <th colspan="3"></th>
     </tr>
@@ -22,7 +22,7 @@
   <tbody>
     <% @corrections.each do |correction| %>
       <tr>
-        <td><%= correction.team %></td>
+        <td><%= correction.team.name %></td>
         <td><%= correction.corrector %></td>
         <td><%= correction.date %></td>
         <td><%= correction.pitch %></td>
