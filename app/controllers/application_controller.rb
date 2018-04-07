@@ -40,6 +40,6 @@ class ApplicationController < ActionController::Base
   helper_method :active_members_full
   helper_method :what_team
 
-  # before_action :authenticate_login!
+  before_action :authenticate_login!
 
 end
