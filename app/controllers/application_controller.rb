@@ -18,9 +18,9 @@ class ApplicationController < ActionController::Base
 
   def still_to_go
   	curr = active_teams
-  	ret = Team.where(active: true).joins(:all_hands).where(created_at: (Time.now.midnight - 5.day)..Time.now).pluck(:name)
-    puts "\n\n\n" + ret.to_s + "\n\n\n"
-  	return curr - ret
+  	ret = AllHand.where(created_at: (Time.now.midnight - 5.day)..Time.now).pluck(:team_id)
+    tmp = Team.find(ret).pluck(:name)
+    return curr - tmp
   end
 
   def is_admin
