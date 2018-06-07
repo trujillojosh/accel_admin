@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  t1q1: MyText
+  t1q2: MyText
+  t1q3: MyText
+  t1q4: MyText
+  t2q1: MyText
+  t2q2: MyText
+  t2q3: MyText
+  t2q4: MyText
+  t2q5: MyText
+  t2q6: MyText
+  t3q1: MyText
+  t3q2: MyText
+  t3q3: MyText
+  t3q4: MyText
+  t3q5: MyText
+  t5q1: MyText
+  t5q2: MyText
+  t6q1: MyText
+  t6q2: MyText
+  t6q3: MyText
+  t6q4: MyText
+  t6q5: MyText
+  t6q6: MyText
+
+two:
+  t1q1: MyText
+  t1q2: MyText
+  t1q3: MyText
+  t1q4: MyText
+  t2q1: MyText
+  t2q2: MyText
+  t2q3: MyText
+  t2q4: MyText
+  t2q5: MyText
+  t2q6: MyText
+  t3q1: MyText
+  t3q2: MyText
+  t3q3: MyText
+  t3q4: MyText
+  t3q5: MyText
+  t5q1: MyText
+  t5q2: MyText
+  t6q1: MyText
+  t6q2: MyText
+  t6q3: MyText
+  t6q4: MyText
+  t6q5: MyText
+  t6q6: MyText

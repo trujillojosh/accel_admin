@@ -1,0 +1,2 @@
+class Teammaking < ApplicationRecord
+end

@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teammakings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>T1q1</th>
+      <th>T1q2</th>
+      <th>T1q3</th>
+      <th>T1q4</th>
+      <th>T2q1</th>
+      <th>T2q2</th>
+      <th>T2q3</th>
+      <th>T2q4</th>
+      <th>T2q5</th>
+      <th>T2q6</th>
+      <th>T3q1</th>
+      <th>T3q2</th>
+      <th>T3q3</th>
+      <th>T3q4</th>
+      <th>T3q5</th>
+      <th>T5q1</th>
+      <th>T5q2</th>
+      <th>T6q1</th>
+      <th>T6q2</th>
+      <th>T6q3</th>
+      <th>T6q4</th>
+      <th>T6q5</th>
+      <th>T6q6</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teammakings.each do |teammaking| %>
+      <tr>
+        <td><%= teammaking.t1q1 %></td>
+        <td><%= teammaking.t1q2 %></td>
+        <td><%= teammaking.t1q3 %></td>
+        <td><%= teammaking.t1q4 %></td>
+        <td><%= teammaking.t2q1 %></td>
+        <td><%= teammaking.t2q2 %></td>
+        <td><%= teammaking.t2q3 %></td>
+        <td><%= teammaking.t2q4 %></td>
+        <td><%= teammaking.t2q5 %></td>
+        <td><%= teammaking.t2q6 %></td>
+        <td><%= teammaking.t3q1 %></td>
+        <td><%= teammaking.t3q2 %></td>
+        <td><%= teammaking.t3q3 %></td>
+        <td><%= teammaking.t3q4 %></td>
+        <td><%= teammaking.t3q5 %></td>
+        <td><%= teammaking.t5q1 %></td>
+        <td><%= teammaking.t5q2 %></td>
+        <td><%= teammaking.t6q1 %></td>
+        <td><%= teammaking.t6q2 %></td>
+        <td><%= teammaking.t6q3 %></td>
+        <td><%= teammaking.t6q4 %></td>
+        <td><%= teammaking.t6q5 %></td>
+        <td><%= teammaking.t6q6 %></td>
+        <td><%= link_to 'Show', teammaking %></td>
+        <td><%= link_to 'Edit', edit_teammaking_path(teammaking) %></td>
+        <td><%= link_to 'Destroy', teammaking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Teammaking', new_teammaking_path %>
