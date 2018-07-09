@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327021944) do
+ActiveRecord::Schema.define(version: 20180607233227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,12 @@ ActiveRecord::Schema.define(version: 20180327021944) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "corr_histories", force: :cascade do |t|
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "corrections", force: :cascade do |t|
     t.bigint "team_id"
     t.string "corrector"
@@ -81,6 +87,7 @@ ActiveRecord::Schema.define(version: 20180327021944) do
     t.string "provider"
     t.string "uid"
     t.boolean "admin"
+    t.integer "team"
     t.index ["email"], name: "index_logins_on_email", unique: true
     t.index ["provider"], name: "index_logins_on_provider"
     t.index ["reset_password_token"], name: "index_logins_on_reset_password_token", unique: true
@@ -96,6 +103,34 @@ ActiveRecord::Schema.define(version: 20180327021944) do
     t.index ["team_id"], name: "index_members_on_team_id"
   end
 
+  create_table "teammakings", force: :cascade do |t|
+    t.text "t1q1"
+    t.text "t1q2"
+    t.text "t1q3"
+    t.text "t1q4"
+    t.text "t2q1"
+    t.text "t2q2"
+    t.text "t2q3"
+    t.text "t2q4"
+    t.text "t2q5"
+    t.text "t2q6"
+    t.text "t3q1"
+    t.text "t3q2"
+    t.text "t3q3"
+    t.text "t3q4"
+    t.text "t3q5"
+    t.text "t5q1"
+    t.text "t5q2"
+    t.text "t6q1"
+    t.text "t6q2"
+    t.text "t6q3"
+    t.text "t6q4"
+    t.text "t6q5"
+    t.text "t6q6"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.integer "batch"
@@ -105,6 +140,15 @@ ActiveRecord::Schema.define(version: 20180327021944) do
     t.string "lead"
     t.text "summary"
     t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "usercorrects", force: :cascade do |t|
+    t.integer "p1"
+    t.integer "p2"
+    t.integer "p3"
+    t.integer "p4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

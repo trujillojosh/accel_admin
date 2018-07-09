@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :teammakings
   resources :bulk_attendances
   resources :attendances
   resources :users

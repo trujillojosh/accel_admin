@@ -1,0 +1,34 @@
+
+<%= simple_form_for(@teammaking) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :t1q1, label: 'What are the skills i have that are usefull for the project' %>
+    <%= f.input :t1q2 %>
+    <%= f.input :t1q3 %>
+    <%= f.input :t1q4 %>
+    <%= f.input :t2q1 %>
+    <%= f.input :t2q2 %>
+    <%= f.input :t2q3 %>
+    <%= f.input :t2q4 %>
+    <%= f.input :t2q5 %>
+    <%= f.input :t2q6 %>
+    <%= f.input :t3q1 %>
+    <%= f.input :t3q2 %>
+    <%= f.input :t3q3 %>
+    <%= f.input :t3q4 %>
+    <%= f.input :t3q5 %>
+    <%= f.input :t5q1 %>
+    <%= f.input :t5q2 %>
+    <%= f.input :t6q1 %>
+    <%= f.input :t6q2 %>
+    <%= f.input :t6q3 %>
+    <%= f.input :t6q4 %>
+    <%= f.input :t6q5 %>
+    <%= f.input :t6q6 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
